@@ -10,8 +10,24 @@ import {
 } from "@mui/material";
 
 export default function CustomSearchField() {
-  const theme = useTheme();
+  const theme = useTheme(); // rsponsicve breakpoints
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
+  // CUSTOMIZABLE: Add search state management
+  const [searchQuery, setSearchQuery] = React.useState("");
+
+  // CUSTOMIZABLE: Add search functionality
+  const handleSearch = () => {
+    console.log("Searching for:", searchQuery);
+    // Implement actual search logic here
+    // Example: onSearch(searchQuery) or navigate(`/search?q=${searchQuery}`)
+  };
+
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      handleSearch();
+    }
+  };
 
   return (
     <Box

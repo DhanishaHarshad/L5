@@ -109,6 +109,8 @@ function CustomAppBar() {
               <Tooltip title="Login">
                 <Button
                   variant="outlined"
+                  // CUSTOMIZABLE: Add click handler
+                  // onClick={handleLoginClick}
                   sx={{
                     color: "black",
                     borderColor: "black",
@@ -139,6 +141,8 @@ function CustomAppBar() {
           </IconButton>
         )}
 
+        {/* mobile menu dropdown */}
+
         <Menu
           anchorEl={anchorEl}
           open={Boolean(anchorEl)}
@@ -152,6 +156,7 @@ function CustomAppBar() {
             horizontal: "right",
           }}
         >
+          {/* mobile nav items */}
           {pages.map((page) => (
             <MenuItem key={page} onClick={handleMenuClose}>
               {page}
@@ -161,6 +166,8 @@ function CustomAppBar() {
             <Button
               variant="outlined"
               size="small"
+              // CUSTOMIZABLE: Add click handler
+              // onClick={handleLoginClick}
               sx={{
                 color: "black",
                 borderColor: "black",
