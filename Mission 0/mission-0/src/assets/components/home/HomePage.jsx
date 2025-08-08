@@ -33,6 +33,7 @@ export default function HomePage() {
 
       {/* Card selection */}
       <Container maxWidth="false" sx={{ py: 4 }}>
+        {/* vertical padding = py */}
         {/* CUSTOMIZABLE: Change maxWidth to 'sm', 'md', 'xl', or false for full width */}
         <Grid
           container
@@ -46,7 +47,8 @@ export default function HomePage() {
               CUSTOMIZABLE: Change to xs=12 sm=6 md=4 lg=3 for different layouts */}
               <Card
                 sx={{
-                  width: "auto",
+                  width: "100%",
+                  maxWidth: "1800px", // max width for cards
                   height: "100%", // make cards all the same height
                   display: "flex",
                   flexDirection: "column",
@@ -67,6 +69,8 @@ export default function HomePage() {
                   }}
                 >
                   {/* image icon - currently a placeholder */}
+
+                  {/* border around the circle and triangle */}
                   <Box
                     sx={{
                       width: 80,
